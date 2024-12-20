@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Экосистема для GTA Arizona SAMP</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="header-logo-container">
+    <img src="images/logo_arz.png" alt="Логотип" class="header-logo">
+  </div>
+  <h1>Экосистема для Arizona Role Play (GTA SAMP)</h1>
+  <p>Эффективно управляйте частными организациями с использованием нашей экосистемы!</p>
+</header>
+<section id="grid">
+  <div class="grid-container">
+    <div class="grid-item" id="head-bot">
+      <a href="#discord-bot">
+        <img src="images/head_bot.png" alt="Discord Bot">
+      </a>
+    </div>
+    <div class="grid-item" id="head-lua">
+      <a href="#lua-script">
+        <img src="images/head_lua.png" alt="Lua Script">
+      </a>
+    </div>
+    <div class="grid-item" id="head-server">
+      <a href="#server">
+        <img src="images/head_server.png" alt="Server">
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section id="discord-bot">
+  <div class="container">
+    <h2>Discord-bot</h2>
+    <div class="section-content">
+      <p>Наш мультифункциональный Discord-бот поможет Вам эффективно управлять руководством частной организации, не затрачивая времени на однотипные процессы.</p>
+      <img src="images/bot.png" alt="Discord Bot" class="section-image">
+      <ul>
+        <li>Балловая система: в бота внедренна мотивационная система. Заместители могут составлять отчеты о проделанной работе, а в свою очередь лидеры на основе этих отчетов выдавать им баллы. Баллы можно обменять на различные предметы, например - виртуальная валюта в самой игре.</li>
+        <li>Регистрация и снятие руководителя: ставьте руководителя, введя всего лишь одну команду в нашем Discord-боте. При ее использовании заместитель добавится в Базу Данных, а так же для него сгенерируется уникальный токен, который будет использоваться им для работы с .lua скриптами</li>
+        <li>Контроль: владелец организации запросто может контролировать все процессы. Каждое действия руководителей логируется в удобном для восприятия формате.</li>
+      </ul>
+      <a href="#lua-script" class="cta-button">Продолжить</a>
+    </div>
+  </div>
+</section>
+
+<section id="lua-script">
+  <div class="container">
+    <h2>.lua скрипт</h2>
+    <div class="section-content">
+      <p>Наш .lua скрипт полностью автоматизирует процесс продажи рангов!</p>
+      <iframe src="https://drive.google.com/file/d/1b2zl5vsoFUD7Hyw_6CszgS4wxM-y5cjR/preview" width="1024" height="768" allow="autoplay" muted></iframe>
+      <ul>
+        <li>При продаже скрипт автоматически считывает данные покупателя, продавца и информацию о ранге.</li>
+        <li>Скрипт отправляет собранные данные, а так же уникальный токен заместителя на сервер для проверки.</li>
+        <li>Информация с логированием продажи отправляется в технический канал Discord, а также руководителю в личные сообщения Discord.</li>
+      </ul>
+      <a href="#server" class="cta-button">Продолжить</a>
+    </div>
+  </div>
+</section>
+
+<section id="server">
+  <div class="container">
+    <h2>Сервер</h2>
+    <div class="section-content">
+      <p>Cервер предназначен для автоматической работы с нашим .lua скриптом</p>
+      <img src="images/scheme.png" alt="Server" class="section-image">
+      <ul>
+        <li>Сервер получает информацию о новой продаже от .Lua скрипта, проверяет соответствие токена руководителя и ника продавца.</li>
+        <li>Нами выстроен весьма серьезный алгоритм безопасности, фальсификация данных, либо же несанкционированный доступ - исключенны.</li>
+        <li>Более того - мы предусмотрели доступ к серверу из любой точки мира. Запрос от .lua скрипта перед попаданием на сервер проксируется через иной сервер в США.</li>
+      </ul>
+      <a href="#conclusion" class="cta-button">Заключение</a>
+    </div>
+  </div>
+</section>
+
+<section id="conclusion">
+  <div class="container">
+    <h2>Заключение</h2>
+    <div class="section-content">
+      <p>Присоединяйтесь к нашей экосистеме для улучшения управления вашей частной организацией. Автоматизация процессов и интеграция с Discord обеспечит вам удобство и эффективность в управлении.</p>
+      <a href="https://vk.com/esketi" class="cta-button">Свяжитесь с нами</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2024 Байков Даниил.</p>
+</footer>
+
+</body>
+</html>
