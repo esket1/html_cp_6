@@ -6,36 +6,37 @@
   <title>Экосистема для GTA Arizona SAMP</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="script.js"></script>
 </head>
 <body>
 
-<header>
+<header data-aos="bounce-in">
   <div class="header-logo-container">
     <img src="images/logo_arz.png" alt="Логотип" class="header-logo">
   </div>
-  <h1>Экосистема для Arizona Role Play (GTA SAMP)</h1>
+  <h1>Экосистема для Arizona Role Play</h1>
   <p>Эффективно управляйте частными организациями с использованием нашей экосистемы!</p>
 </header>
-<section id="grid">
+<section id="grid" data-aos="fade-up" data-aos-duration="800">
   <div class="grid-container">
-    <div class="grid-item" id="head-bot">
+    <div class="grid-item" id="head_bot">
       <a href="#discord-bot">
         <img src="images/head_bot.png" alt="Discord Bot">
       </a>
     </div>
-    <div class="grid-item" id="head-lua">
+    <div class="grid-item" id="head_lua">
       <a href="#lua-script">
         <img src="images/head_lua.png" alt="Lua Script">
       </a>
     </div>
-    <div class="grid-item" id="head-server">
+    <div class="grid-item" id="head_server">
       <a href="#server">
         <img src="images/head_server.png" alt="Server">
       </a>
     </div>
   </div>
 </section>
-
 
 <section id="discord-bot">
   <div class="container">
@@ -44,11 +45,26 @@
       <p>Наш мультифункциональный Discord-бот поможет Вам эффективно управлять руководством частной организации, не затрачивая времени на однотипные процессы.</p>
       <img src="images/bot.png" alt="Discord Bot" class="section-image">
       <ul>
-        <li>Балловая система: в бота внедренна мотивационная система. Заместители могут составлять отчеты о проделанной работе, а в свою очередь лидеры на основе этих отчетов выдавать им баллы. Баллы можно обменять на различные предметы, например - виртуальная валюта в самой игре.</li>
+        <li>Балловая система: в нашем боте есть мотивационная система. Заместители могут составлять отчеты о проделанной работе, а в свою очередь лидеры на основе этих отчетов выдавать им баллы. Баллы можно обменять на различные предметы, например - виртуальная валюта в самой игре.</li>
         <li>Регистрация и снятие руководителя: ставьте руководителя, введя всего лишь одну команду в нашем Discord-боте. При ее использовании заместитель добавится в Базу Данных, а так же для него сгенерируется уникальный токен, который будет использоваться им для работы с .lua скриптами</li>
         <li>Контроль: владелец организации запросто может контролировать все процессы. Каждое действия руководителей логируется в удобном для восприятия формате.</li>
       </ul>
-      <a href="#lua-script" class="cta-button">Продолжить</a>
+      <button class="cta-button toggle-spoiler">Показать детали</button>
+      <div class="spoiler-content" style="display: none;">
+        <p>Примеры использования команд нашего бота:</p>
+        <img src="images/profile.png" alt="Профиль" class="spoiler-image">
+        <img src="images/ping.png" alt="Пинг" class="spoiler-image">
+        <p>Примеры логирования и иных автоматических функций:</p>
+        <img src="images/log_delete.png" alt="Логирование о удалении" class="spoiler-image">
+        <img src="images/log_edit.png" alt="Логирование о редактировании" class="spoiler-image">
+        <img src="images/points_log.png" alt="Логирование о баллах" class="spoiler-image">
+        <img src="images/points_notif.png" alt="Оповещение о баллах" class="spoiler-image">
+        <img src="images/birthday.png" alt="Автоматические поздравления" class="spoiler-image">
+        <p>Общий список команд:</p>
+        <img src="images/commands.png" alt="Список команд" class="spoiler-image">
+        <img src="images/commands1.png" alt="Список команд" class="spoiler-image">
+        <img src="images/commands2.png" alt="Список команд" class="spoiler-image">
+      </div>
     </div>
   </div>
 </section>
@@ -58,13 +74,23 @@
     <h2>.lua скрипт</h2>
     <div class="section-content">
       <p>Наш .lua скрипт полностью автоматизирует процесс продажи рангов!</p>
-      <iframe src="https://drive.google.com/file/d/1b2zl5vsoFUD7Hyw_6CszgS4wxM-y5cjR/preview" width="1024" height="768" allow="autoplay" muted></iframe>
+      <iframe src="https://drive.google.com/file/d/1b2zl5vsoFUD7Hyw_6CszgS4wxM-y5cjR/preview" width="1024" height="768" allow="autoplay"  allowfullscreen="1" muted></iframe>
       <ul>
         <li>При продаже скрипт автоматически считывает данные покупателя, продавца и информацию о ранге.</li>
         <li>Скрипт отправляет собранные данные, а так же уникальный токен заместителя на сервер для проверки.</li>
-        <li>Информация с логированием продажи отправляется в технический канал Discord, а также руководителю в личные сообщения Discord.</li>
+        <li>Информация с логом продажи отправляется в технический канал Discord, а также руководителю в личные сообщения Discord.</li>
       </ul>
-      <a href="#server" class="cta-button">Продолжить</a>
+      <button class="cta-button toggle-spoiler">Показать детали</button>
+      <div class="spoiler-content" style="display: none;">
+        <p>Примеры работы скрипта со стороны Discord:</p>
+        <img src="images/registration.png" alt="Регистрация заместителя" class="spoiler-image">
+        <img src="images/log_sell_ds.png" alt="Логирование о продаже ранга" class="spoiler-image">
+        <img src="images/notif_sell.png" alt="Оповещение о продаже ранга" class="spoiler-image">
+        <p>В самой игре скрипт работает полностью автоматически, лишь логируя свои действия в чат</p>
+        <p>Примеры логирования скрипта в игре:</p>
+        <img src="images/log_load.png" alt="Оповещение о продаже ранга" class="spoiler-image">
+        <img src="images/log_sell_game.png" alt="Оповещение о продаже ранга" class="spoiler-image">
+      </div>
     </div>
   </div>
 </section>
@@ -73,31 +99,51 @@
   <div class="container">
     <h2>Сервер</h2>
     <div class="section-content">
-      <p>Cервер предназначен для автоматической работы с нашим .lua скриптом</p>
+      <p>Сервер предназначен для автоматической работы с нашим .lua скриптом</p>
       <img src="images/scheme.png" alt="Server" class="section-image">
       <ul>
-        <li>Сервер получает информацию о новой продаже от .Lua скрипта, проверяет соответствие токена руководителя и ника продавца.</li>
-        <li>Нами выстроен весьма серьезный алгоритм безопасности, фальсификация данных, либо же несанкционированный доступ - исключенны.</li>
+        <li>Сервер получает информацию о новой продаже от .lua скрипта, проверяет соответствие токена руководителя и ника продавца.</li>
+        <li>Нами выстроен весьма серьезный алгоритм безопасности, фальсификация данных, либо же несанкционированный доступ - исключены.</li>
         <li>Более того - мы предусмотрели доступ к серверу из любой точки мира. Запрос от .lua скрипта перед попаданием на сервер проксируется через иной сервер в США.</li>
       </ul>
-      <a href="#conclusion" class="cta-button">Заключение</a>
     </div>
   </div>
 </section>
 
 <section id="conclusion">
   <div class="container">
-    <h2>Заключение</h2>
+    <h2>Присоединяйтесь!</h2>
     <div class="section-content">
-      <p>Присоединяйтесь к нашей экосистеме для улучшения управления вашей частной организацией. Автоматизация процессов и интеграция с Discord обеспечит вам удобство и эффективность в управлении.</p>
-      <a href="https://vk.com/esketi" class="cta-button">Свяжитесь с нами</a>
+      <ul>
+        <li>Присоединяйтесь к нашей экосистеме для более качественного управления вашей частной организацией.</li>
+        <li>Автоматизация процессов и интеграция с Discord обеспечит вам удобство и эффективность в управлении, а так же облегчит рутинную работу заместителей и лидеров вашей организации.</li>
+      </ul>
+      <a href="https://vk.com/esketi" target="_blank" class="cta-button">Свяжитесь с нами</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>&copy; 2024 Байков Даниил.</p>
+  <p>&copy; Байков Даниил, 2024</p>
+  <p>Все права защищены</p>
+  <div class="social-links">
+    <a href="https://vk.com/esketi" target="_blank" class="social-icon">
+      <img src="images/vk.png" alt="VK" />
+    </a>
+    <a href="https://discordapp.com/users/1084171468469977098" target="_blank" class="social-icon">
+      <img src="images/ds.png" alt="Discord" />
+    </a>
+    <a href="https://t.me/esket1" target="_blank" class="social-icon">
+      <img src="images/tg.png" alt="Telegram" />
+    </a>
+    <a href="https://github.com/esket1" target="_blank" class="social-icon">
+      <img src="images/github.png" alt="Github" />
+    </a>
+  </div>
 </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
